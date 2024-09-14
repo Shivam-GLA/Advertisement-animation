@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.image {
+  position: relative;
+  height: 400px;
+  width: 500px;
+  transition: 0.3s;
+}
+
+.image img {
+  position: absolute;
+}
+
+.image img#bottle1 {
+  bottom: 0;
+  left: -60px;
+  height: 100%;
+  z-index: 2;
+  animation: bottle 2s linear infinite;
+}
+
+.image img#bottle2 {
+  bottom: 0;
+  right: -70px;
+  height: 100%;
+  z-index: 3;
+  animation: bottle2 2s linear infinite;
+}
+
+.image img#face {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -55%) scale(0.8);
+  z-index: 4;
+}
+
+.image img#lemon2_1 {
+  bottom: 15px;
+  right: 0;
+  animation: side 2s linear infinite;
+}
+
+.image img#lemon2_2 {
+  bottom: 15px;
+  left: 0;
+  animation: side2 2s linear infinite;
+}
+
+.image img#lemon_1 {
+  left: 47%;
+  top: 100px;
+  z-index: 5;
+  animation: rotate 7s linear infinite;
+}
+
+.image img#lemon_2 {
+  right: 47%;
+  top: 100px;
+  z-index: 5;
+  animation: rotate2 5s linear infinite;
+}
+
+.image img#lemon_3 {
+  left: 50%;
+  bottom: 25px;
+  transform: translateX(-50%) scale(2);
+}
+
+.image:hover {
+  transform: scale(1.5);
+}
+
+p {
+  position: absolute;
+  bottom: 20px;
+  font-family: "Lobster Two", system-ui;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+p>a{
+  text-decoration: none;
+}
+
+p>a:hover{
+  color: orange;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate2 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate3 {
+  0% {
+    transform: translateX(-50%) rotate(0deg) scale(2);
+  }
+
+  100% {
+    transform: translateX(-50%) rotate(-360deg) scale(2);
+  }
+}
+
+@keyframes bottle {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(20px, 20px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes bottle2 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(-20px, 20px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes side {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(20px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes side2 {
+  0% {
+    transform: translateX(0px);
+  }
+
+  50% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
